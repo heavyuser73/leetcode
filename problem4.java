@@ -10,22 +10,18 @@ class Solution {
             if(nums1.length > index1 && nums2.length > index2) {
                 int min=0;
                 if(nums1[index1] < nums2[index2]) {
-                    min = nums1[index1];
-                    index1++;
+                    min = nums1[index1++];
                 }
                 else {
-                    min = nums2[index2];
-                    index2++;
+                    min = nums2[index2++];
                 }
                 result[i] = min;
             }
             else if(nums1.length > index1) {
-                result[i] = nums1[index1];
-                index1++;
+                result[i] = nums1[index1++];
             }
             else {
-                result[i] = nums2[index2];
-                index2++;
+                result[i] = nums2[index2++];
             }
         }
         if(result.length % 2 == 1) 
