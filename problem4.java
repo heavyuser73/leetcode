@@ -6,14 +6,7 @@ class Solution {
  
         for(int i=0;i< nums1.length + nums2.length;i++) {
             if(nums1.length > index1 && nums2.length > index2) {
-                int min=0;
-                if(nums1[index1] < nums2[index2]) {
-                    min = nums1[index1++];
-                }
-                else {
-                    min = nums2[index2++];
-                }
-                mergeArray[i] = min;
+                mergeArray[i] = (nums1[index1] < nums2[index2])?nums1[index1++]:nums2[index2++];
             }
             else if(nums1.length > index1) {
                 mergeArray[i] = nums1[index1++];
